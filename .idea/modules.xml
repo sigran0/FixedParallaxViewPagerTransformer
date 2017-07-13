@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FixedParallaxTransformerSample.iml" filepath="$PROJECT_DIR$/FixedParallaxTransformerSample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FixedParallaxViewPagerTransformerSample/FixedParallaxViewPagerTransformerSample.iml" filepath="$PROJECT_DIR$/FixedParallaxViewPagerTransformerSample/FixedParallaxViewPagerTransformerSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/fixedparallaxtransformer/fixedparallaxtransformer.iml" filepath="$PROJECT_DIR$/fixedparallaxtransformer/fixedparallaxtransformer.iml" />
     </modules>
   </component>
