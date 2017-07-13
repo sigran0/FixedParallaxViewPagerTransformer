@@ -1,1 +1,1 @@
-include ':FixedParallaxViewPagerTransformerSample', ':fixedparallaxtransformer'
+include ':ParallaxViewPagerTransformerSample', ':parallaxtransformer', ':fixedparallaxtransformer-debug'

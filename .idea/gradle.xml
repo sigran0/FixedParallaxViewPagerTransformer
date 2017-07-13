@@ -8,8 +8,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/FixedParallaxViewPagerTransformerSample" />
-            <option value="$PROJECT_DIR$/fixedparallaxtransformer" />
+            <option value="$PROJECT_DIR$/ParallaxViewPagerTransformerSample" />
+            <option value="$PROJECT_DIR$/fixedparallaxtransformer-debug" />
+            <option value="$PROJECT_DIR$/parallaxtransformer" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
