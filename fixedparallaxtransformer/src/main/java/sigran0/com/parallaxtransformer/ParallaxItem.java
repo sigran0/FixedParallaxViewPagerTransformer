@@ -9,13 +9,13 @@ public class ParallaxItem {
     private static final float DEFAULT_SPEED = 0.3f;
 
     public static class SPEED {
-        public static final float FASTEST = -3.0f;
-        public static final float FAST = -2.0f;
-        public static final float NORMAL = -1.0f;
-        public static final float SLOW = -0.75f;
-        public static final float SLOWER = -0.5f;
-        public static final float SLOWEST = -0.25f;
-        public static final float FIXED = 1.0f;
+        public static final float FASTEST = 3.0f;
+        public static final float FAST = 2.0f;
+        public static final float NORMAL = 1.0f;
+        public static final float SLOW = 0.75f;
+        public static final float SLOWER = 0.5f;
+        public static final float SLOWEST = 0.25f;
+        public static final float FIXED = -1.0f;
     }
 
     public static class DIRECTION {
@@ -29,11 +29,11 @@ public class ParallaxItem {
     private int mDirection;
 
     public ParallaxItem(int res) {
-        this(res, DEFAULT_SPEED);
+        this(res, DEFAULT_SPEED, DIRECTION.REVERSE);
     }
 
     public ParallaxItem(int res, float speed){
-        this(res, speed, DIRECTION.REVERSE);
+        this(res, speed, DIRECTION.ONGOING);
     }
 
     public ParallaxItem(int res, float speed, int direction){
