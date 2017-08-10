@@ -4,6 +4,9 @@
 FixParallaxTransformer Plugin is ViewPager.PageTransformer plugin to parallax moving.
 it is easy to use. and can make beautiful ViewPager in your app.
 
+![Alt Text](https://github.com/sigran0/FixedParallaxViewPagerTransformer/blob/master/sample.gif)
+
+
 ### Install
 First, add this line in your project gradle.build
 ```java
