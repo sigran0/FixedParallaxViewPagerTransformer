@@ -34,6 +34,19 @@ ParallaxItem fixItem = new ParallaxItem(R.id.fr_sample_tv_title, ParallaxItem.SP
 ParallaxItem fastMoveItem = new ParallaxItem(R.id.fr_sample_tv_right, ParallaxItem.SPEED.SLOWER);
 ParallaxItem leftToRightMoveItem = new ParallaxItem(R.id.fr_sample_tv_left, ParallaxItem.SPEED.FASTEST, ParallaxItem.DIRECTION.REVERSE);
 ```
+And create instance of ParallaxTransformer and add your ParallaxItem into this instance.
+The constructor of ParallaxTransformer can have following parameters
+ - List
+ - Single ParallaxItem
+ - Multi ParallaxItem
+
+Follow below code
+```java
+ViewPager mPager;
+...
+ParallaxTransformer pt = new ParallaxTransformer(fixItem, backgroundItem, fastMoveItem, leftToRightMoveItem);
+mPager.setPageTransformer(false, pt);
+```
 
 ### Todos
  - Make moving forward and backward equal position
