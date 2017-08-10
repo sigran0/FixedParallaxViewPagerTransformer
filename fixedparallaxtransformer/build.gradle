@@ -1,14 +1,41 @@
 apply plugin: 'com.android.library'
 
-android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+def _siteUrl = 'https://github.com/sigran0/FixedParallaxViewPagerTransformer'      // Homepage URL of the library
+def _gitUrl = 'https://github.com/sigran0/FixedParallaxViewPagerTransformer.git'
+def _issueUrl = 'https://github.com/sigran0/FixedParallaxViewPagerTransformer/issues'
 
+def _name = 'FixedParallaxTransformer'
+def _name2 = 'Parallax Transformer'
+def _description = 'a Parallax library for ViewPager'
+def _lebels = ['android', 'parallax', 'viewpager', 'pager']
+def _version = "1.0.0"
+
+group = "sigran0.com.parallaxtransformer"
+version _version
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'sigran0'
+    groupId = 'com.smtown.sigran0'
+    artifactId = 'FixedParallaxTransformer'
+    publishVersion = '0.1.4'
+    desc = 'Fixed Parallax Transformer for Android - It is easy to use, and can make beautiful View Pager'
+    website = 'https://github.com/sigran0/FixedParallaxViewPagerTransformer'
+    issueTracker = "${website}/issues"
+    repository = "${website}.git"
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "25.0.3"
+    enforceUniquePackageName = false
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 26
+        targetSdkVersion 21
         versionCode 1
-        versionName "1.0"
+        versionName _version
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -26,6 +53,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:appcompat-v7:21.+'
     testCompile 'junit:junit:4.12'
 }

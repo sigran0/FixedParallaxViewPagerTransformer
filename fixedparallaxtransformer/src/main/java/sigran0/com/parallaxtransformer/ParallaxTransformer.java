@@ -3,6 +3,7 @@ package sigran0.com.parallaxtransformer;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ public class ParallaxTransformer implements ViewPager.PageTransformer {
 
     private List<ParallaxItem> mItemList;
 
+    private SparseArray<Float> mViewPositionArray = new SparseArray<>();
+
     private float speed = 0.2f;
 
     public ParallaxTransformer(List<ParallaxItem> items){
@@ -30,7 +33,7 @@ public class ParallaxTransformer implements ViewPager.PageTransformer {
 
     public ParallaxTransformer(int res){
 
-        this(res, ParallaxItem.SPEED.SLOWER);
+        this(res, ParallaxItem.SPEED.FIXED);
     }
 
     public ParallaxTransformer(int res, float speed){
@@ -53,15 +56,26 @@ public class ParallaxTransformer implements ViewPager.PageTransformer {
         if(Build.VERSION.SDK_INT <= 13)
             throw new UnsupportedOperationException("This library can use after HoneyComb version");
 
-        Log.d("good", "transformPage: with : " + view.getWidth());
+//        if(BuildConfig.DEBUG)
+//            Log.d("good", "transformPage: with : " + view.getWidth());
 
         for(ParallaxItem item : mItemList){
 
             View parallaxView = view.findViewById(item.getItemResource());
 
-            if(parallaxView != null) {
+            int key = parallaxView.hashCode();
 
+            if(mViewPositionArray.get(key) == null)
+                mViewPositionArray.put(key, 0f);
+
+            if(parallaxView != null) {
                 float parallaxViewWidth = parallaxView.getWidth();
+                float parallaxMoveSize = position * parallaxViewWidth;
+
+                float beforePosition = mViewPositionArray.get(key);
+                float currentPosition = mViewPositionArray.get(key) + parallaxMoveSize;
+
+                //Log.d(TAG, String.format("object %d : %f", key, currentPosition));
                 parallaxView.setTranslationX(position * parallaxViewWidth * item.getSpeed() * item.getDirection());
             }
         }
