@@ -1,6 +1,7 @@
 # FixedParallaxTransformer
 
 ### What is this?
+---
 FixParallaxTransformer Plugin is ViewPager.PageTransformer plugin to parallax moving.
 it is easy to use. and can make beautiful ViewPager in your app.
 
@@ -8,6 +9,7 @@ it is easy to use. and can make beautiful ViewPager in your app.
 
 
 ### Install
+---
 First, add this line in your project gradle.build
 ```java
 repositories {
@@ -23,7 +25,9 @@ compile 'com.smtown.sigran0:FixedParallaxTransformer:0.1.3'
 
 just end!
 
+
 ### Useage
+---
 To make parallax, just add Resource ID of view that you want to parallax moving in your Fragment of ViewPager
 
 Follow below code.
@@ -49,12 +53,13 @@ mPager.setPageTransformer(false, pt);
 ```
 
 ### Todos
+---
  - Make moving forward and backward equal position
 
-License
-----
-
+### License
+---
 MIT
+
 
 
 Thanks to use this plugin
