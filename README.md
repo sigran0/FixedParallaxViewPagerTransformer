@@ -10,17 +10,9 @@ it is easy to use. and can make beautiful ViewPager in your app.
 
 ### Install
 ---
-First, add this line in your project gradle.build
+Add this line in your app gradle.build
 ```java
-repositories {
-    maven {
-        url 'https://dl.bintray.com/sigran0/maven/'
-    }
-}
-```
-Second, add this line in your app gradle.build
-```java
-compile 'com.smtown.sigran0:FixedParallaxTransformer:0.1.3'
+compile 'com.smtown.sigran0:FixedParallaxTransformer:0.1.4'
 ```
 
 just end!
